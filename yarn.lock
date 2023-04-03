@@ -51,6 +51,11 @@
     "pvutils" "^1.1.3"
     "tslib" "^2.4.0"
 
+"async-limiter@~1.0.0":
+  "integrity" "sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ=="
+  "resolved" "https://registry.npmjs.org/async-limiter/-/async-limiter-1.0.1.tgz"
+  "version" "1.0.1"
+
 "body-parser@1.20.1":
   "integrity" "sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw=="
   "resolved" "https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.tgz"
@@ -230,6 +235,14 @@
     "has" "^1.0.3"
     "has-symbols" "^1.0.3"
 
+"gun-file@^1.0.123":
+  "integrity" "sha512-Vs5AdPhv5WldcRCbYg9/Lydx0qgx4No3i5YRXu0L3Hw+Y49mVqNqauHzpbQTO2hjQ+Cii6YjaYVBfDYXsdlA0g=="
+  "resolved" "https://registry.npmjs.org/gun-file/-/gun-file-1.0.123.tgz"
+  "version" "1.0.123"
+  dependencies:
+    "gun" "^0.9.96"
+    "json-6" "^0"
+
 "gun@^0.2020.1239":
   "integrity" "sha512-e4BsRL4P6oLT1m7G+0H8VhhdfFEHhcPc5tOnmgTO6q9ZQrT+Q0B5XKrpAV3NcuLq3SpnOevlz6+Ul5CVaavcXQ=="
   "resolved" "https://registry.npmjs.org/gun/-/gun-0.2020.1239.tgz"
@@ -238,6 +251,16 @@
     "ws" "^7.2.1"
   optionalDependencies:
     "@peculiar/webcrypto" "^1.1.1"
+
+"gun@^0.9.96":
+  "integrity" "sha512-tH29XmVl5PPJp2wKEaIKrT5OQhqrPAzAzfYRuKjBIubDqQQPs7SIa7EplOY/K1j7L9Rex5zPAyEBZFj+lz0y+Q=="
+  "resolved" "https://registry.npmjs.org/gun/-/gun-0.9.9999991.tgz"
+  "version" "0.9.9999991"
+  dependencies:
+    "ws" "~>5.2.0"
+  optionalDependencies:
+    "node-webcrypto-ossl" "^1.0.39"
+    "text-encoding" "^0.7.0"
 
 "has-symbols@^1.0.3":
   "integrity" "sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A=="
@@ -278,6 +301,11 @@
   "integrity" "sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g=="
   "resolved" "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz"
   "version" "1.9.1"
+
+"json-6@^0":
+  "integrity" "sha512-drsXxm2Z5DnjgtH80fy6qMfNPQMpaK4blHBcWlHFLiaz/NKfRFSuvhLoJGzZuo64B/t8Nx1stNzCTUzrmKz+dw=="
+  "resolved" "https://registry.npmjs.org/json-6/-/json-6-0.1.128.tgz"
+  "version" "0.1.128"
 
 "luxon@^3.2.1":
   "integrity" "sha512-An0UCfG/rSiqtAIiBPO0Y9/zAnHUZxAMiCpTd5h2smgsj7GGmcenvrvww2cqNA8/4A5ZrD1gJpHN2mIHZQF+Mg=="
@@ -458,6 +486,11 @@
   "resolved" "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz"
   "version" "2.0.1"
 
+"text-encoding@^0.7.0":
+  "integrity" "sha512-oJQ3f1hrOnbRLOcwKz0Liq2IcrvDeZRHXhd9RgLrsT+DjWY/nty1Hi7v3dtkaEYbPYe0mUoOfzRrMwfXXwgPUA=="
+  "resolved" "https://registry.npmjs.org/text-encoding/-/text-encoding-0.7.0.tgz"
+  "version" "0.7.0"
+
 "toidentifier@1.0.1":
   "integrity" "sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA=="
   "resolved" "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz"
@@ -506,3 +539,10 @@
   "integrity" "sha512-F+P9Jil7UiSKSkppIiD94dN07AwvFixvLIj1Og1Rl9GGMuNipJnV9JzjD6XuqmAeiswGvUmNLjr5cFuXwNS77Q=="
   "resolved" "https://registry.npmjs.org/ws/-/ws-7.5.9.tgz"
   "version" "7.5.9"
+
+"ws@~>5.2.0":
+  "integrity" "sha512-jZArVERrMsKUatIdnLzqvcfydI85dvd/Fp1u/VOpfdDWQ4c9qWXe+VIeAbQ5FrDwciAkr+lzofXLz3Kuf26AOA=="
+  "resolved" "https://registry.npmjs.org/ws/-/ws-5.2.3.tgz"
+  "version" "5.2.3"
+  dependencies:
+    "async-limiter" "~1.0.0"

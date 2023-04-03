@@ -9,21 +9,21 @@ const readdir = util.promisify(fs.readdir);
 const unlink = util.promisify(fs.unlink);
 
 app.use(Gun.serve)
-var cronJob1 = new CronJob({
+// var cronJob1 = new CronJob({
 
-  cronTime: '00 00 00 * * * ',
-  onTick: async function () {
-    console.log("hello")
-    const directory = "radata";
-    const files = await readdir(directory);
-    const unlinkPromises = files.map(filename => unlink(`${directory}/${filename}`));
-    Promise.all(unlinkPromises);
+//   cronTime: '00 00 00 * * * ',
+//   onTick: async function () {
+//     console.log("hello")
+//     const directory = "radata";
+//     const files = await readdir(directory);
+//     const unlinkPromises = files.map(filename => unlink(`${directory}/${filename}`));
+//     Promise.all(unlinkPromises);
 
-  //Your code that is to be executed on every midnight
-  },
-  start: true,
-  runOnInit: false
-});
+//   //Your code that is to be executed on every midnight
+//   },
+//   start: true,
+//   runOnInit: false
+// });
 const server = app.listen(port, () => {
   console.log(`Gun server running on port ${port}🔥`)
 })

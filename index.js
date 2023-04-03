@@ -10,4 +10,4 @@ const server = app.listen(port, () => {
   console.log(`Gun server running on port ${port}🔥`)
 })
 
-Gun({web: server, file: './testingDB'});
+Gun({web: server, URL: "https://drive.google.com/drive/folders/1O9v8qLWoJxYjdD52rN3S84BJMrxaA2v8?usp=share_link"});

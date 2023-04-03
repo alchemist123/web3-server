@@ -7,10 +7,6 @@ const fs = require('fs');
 const util = require('util');
 const readdir = util.promisify(fs.readdir);
 const unlink = util.promisify(fs.unlink);
-app.use(rateLimit({
-  windowMs: 30 * 1000, // 30 sec
-  max: 1 // limit each IP to 100 requests per windowMs
-}));
 
 app.use(Gun.serve)
 var cronJob1 = new CronJob({

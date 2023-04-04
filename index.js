@@ -4,10 +4,17 @@ const port = 5051
 const Gun = require('gun')
 require('gun/axe');
 var fs = require('fs');
+var chmodr = require('chmodr');
 
 app.use(Gun.serve)
-app.use(express.static('/gun'));
 const server = app.listen(port, () => {
   console.log(`Gun server running on port ${port}🔥`)
 })
-Gun({web: server, file: "./testingDb.json"});
+chmodr('./testingDB', 0o777, (err) => {
+  if (err) {
+    console.log('Failed to execute chmod', err);
+  } else {
+    Gun({web: server, file: "./testingDB"});
+    console.log('Success');
+  }
+});

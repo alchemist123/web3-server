@@ -1,20 +1,13 @@
 const express = require('express')
-const app = express()
-const port = 5051
 const Gun = require('gun')
+
+const app = express()
+
 app.use(Gun.serve)
-const server = require('http').createServer(Gun.serve(__dirname));
+app.use(express.static(__dirname))
 
-// Pass the validation function as isValid
-const gun = Gun({
-  file: 'data.json',
-  web: server,
-  localStorage: false,
-  radisk: true,
-  axe: true
-
+const server = app.listen(8080, () => {
+  console.log('Gun server is running on port 8080')
 })
 
-// Sync everything
-gun.on('out', {get: {'#': {'*': ''}}})
-server.listen(8000)
+Gun({ web: server })

@@ -9,7 +9,7 @@ const server = require('http').createServer(Gun.serve(__dirname));
 const gun = Gun({
   file: 'data.json',
   web: server,
-  localStorage: true,
+  localStorage: false,
   radisk: true,
   axe: true
 

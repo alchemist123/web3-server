@@ -1,14 +1,14 @@
-const express = require('express');
-const Gun = require('gun');
+// in the index.js file
 
-const app = express();
+const express = require('express')
+const app = express()
+const port = 5050
+const Gun = require('gun')
 
-const gun = new Gun({
-  file: './gun-data'
-});
+app.use(Gun.serve)
 
-app.use('/', express.static(__dirname + '/public'));
+const server = app.listen(port, () => {
+  console.log(`Gun server running on port ${port}🔥`)
+})
 
-const server = app.listen(5000, function() {
-  console.log('Server listening on port 3000');
-});
+Gun({ web: server })
